@@ -14,9 +14,9 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build -t NoahBrochu/my-k8s-app:dev .
+            docker build -t noahbrochu/my-k8s-app:qa .
       - run:
           name: Push Docker Image
           command: |
             docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
-            docker push NoahBrochu/my-k8s-app:dev
+            docker push noahbrochu/my-k8s-app:qa
