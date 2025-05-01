@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-k8s-app
-  namespace: dev
+  namespace: qa
   annotations:
       circleci.com/project-id: dd165868-b538-43f2-a275-bde12c28d2e0
   labels:
@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: my-k8s-app
-        image: NoahBrochu/my-k8s-app:dev
+        image: noahbrochu/my-k8s-app:qa
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
